@@ -6,7 +6,7 @@
 
 **Your Personal Fitness Journey, Beautifully Crafted.**
 
-![FitTrack Banner](assets/banner.png)
+![FitTrack Banner](assets/icon.png)
 
 <p>
 <img src="https://img.shields.io/badge/Flutter-3.x-blue?style=for-the-badge&logo=flutter" alt="Flutter Version">
@@ -126,3 +126,27 @@ lib/
 │   └── custom_button.dart        # Example reusable button
 │
 └── main.dart                  # App entry point and initial setup
+
+---
+
+## 🏁 Getting Started
+
+Follow these instructions to get the project up and running on your local machine.
+
+#### **Prerequisites**
+
+-   Flutter SDK (version 3.x or higher)
+-   An IDE like VS Code or Android Studio
+-   An Android Emulator or a physical device
+
+#### **1. Installation**
+
+```bash
+# Clone this repository
+git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git)
+
+# Navigate into the project directory
+cd YOUR_REPOSITORY
+
+# Install dependencies
+flutter pub get
