@@ -6,7 +6,7 @@
 
 **Your Personal Fitness Journey, Beautifully Crafted.**
 
-![FitTrack Banner](assets/icon.png)
+![FitTrack Banner](assets/icon/icon.png)
 
 <p>
 <img src="https://img.shields.io/badge/Flutter-3.x-blue?style=for-the-badge&logo=flutter" alt="Flutter Version">
