@@ -6,6 +6,8 @@
 
 **Your Personal Fitness Journey, Beautifully Crafted.**
 
+![FitTrack Banner](assets/banner.png)
+
 <p>
 <img src="https://img.shields.io/badge/Flutter-3.x-blue?style=for-the-badge&logo=flutter" alt="Flutter Version">
 <img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS-green?style=for-the-badge&logo=android" alt="Platform">
@@ -14,11 +16,16 @@
 
 </div>
 
+> **Note**
+> This project was developed as a task for the virtual internship program at **[CodeAlpha](https://codealpha.tech/)**.
+
 ---
 
 ## ✨ App Showcase
 
 Experience the fluid UI, smooth animations, and seamless light/dark theme transitions.
+
+![FitTrack Demo](assets/demo.gif)
 
 ---
 
