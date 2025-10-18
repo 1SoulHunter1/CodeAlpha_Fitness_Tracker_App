@@ -147,10 +147,10 @@ Follow these steps to get the project running locally on your system.
 
 ```bash
 # Clone this repository
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git)
+git clone https://github.com/1SoulHunter1/CodeAlpha_Fitness_Tracker_App.git
 
 # Navigate into the project directory
-cd YOUR_REPOSITORY
+cd CodeAlpha_Fitness_Tracker_App
 
 # Install dependencies
 flutter pub get
