@@ -95,49 +95,53 @@ This structure makes FitTrack **modular**, **testable**, and **easy to extend**.
 
 ## 📂 Project Structure
 
-```plaintext
+```
+
 lib/
-├── api/                      # Database services and abstraction layer
-│   ├── database_service.dart       # Abstract service definition
-│   ├── firestore_service.dart      # Cloud Firestore implementation
-│   └── sqlite_service.dart         # Local SQLite implementation
+├── api/                  \# Database services and abstraction layer
+│   ├── database\_service.dart     \# Abstract service definition
+│   ├── firestore\_service.dart    \# Cloud Firestore implementation
+│   └── sqlite\_service.dart       \# Local SQLite implementation
 │
-├── models/                   # Data models used across the app
-│   └── activity.dart              # Activity data model
+├── models/               \# Data models used across the app
+│   └── activity.dart           \# Activity data model
 │
-├── providers/                # State management using Provider
-│   ├── fitness_provider.dart      # Handles fitness data and logic
-│   └── theme_provider.dart        # Manages app theme state
+├── providers/            \# State management using Provider
+│   ├── fitness\_provider.dart     \# Handles fitness data and logic
+│   └── theme\_provider.dart       \# Manages app theme state
 │
-├── screens/                  # Main UI screens of the app
-│   ├── add_log_screen.dart        # Screen for adding/editing activities
-│   ├── dashboard_screen.dart      # Displays stats and graphs
-│   ├── home_screen.dart           # Main user navigation
-│   ├── main_screen.dart           # Root app structure
-│   └── settings_screen.dart       # Optional settings or profile screen
+├── screens/              \# Main UI screens of the app
+│   ├── add\_log\_screen.dart       \# Screen for adding/editing activities
+│   ├── dashboard\_screen.dart     \# Displays stats and graphs
+│   ├── home\_screen.dart          \# Main user navigation
+│   ├── main\_screen.dart          \# Root app structure
+│   └── settings\_screen.dart      \# Optional settings or profile screen
 │
-├── utils/                    # Helpers, constants, and theming
-│   ├── app_theme.dart             # Light/Dark theme definitions
-│   └── helpers.dart               # Utility functions and constants
+├── utils/                \# Helpers, constants, and theming
+│   ├── app\_theme.dart            \# Light/Dark theme definitions
+│   └── helpers.dart              \# Utility functions and constants
 │
-├── widgets/                  # Reusable UI components
-│   ├── activity_card.dart        # Custom card showing an activity
-│   ├── stat_card.dart            # Statistic display widget
-│   └── custom_button.dart        # Example reusable button
+├── widgets/              \# Reusable UI components
+│   ├── activity\_card.dart      \# Custom card showing an activity
+│   ├── stat\_card.dart          \# Statistic display widget
+│   └── ...                   \# Other custom widgets
 │
-└── main.dart                  # App entry point and initial setup
+└── main.dart             \# App entry point and initial setup
+
+````
 
 ---
 
 ## 🏁 Getting Started
 
-Follow these instructions to get the project up and running on your local machine.
+Follow these steps to get the project running locally on your system.
 
-#### **Prerequisites**
+### 🔧 Prerequisites
 
--   Flutter SDK (version 3.x or higher)
--   An IDE like VS Code or Android Studio
--   An Android Emulator or a physical device
+-   Flutter SDK 3.x+
+-   IDE: VS Code or Android Studio
+-   Android Emulator or physical device
+
 
 #### **1. Installation**
 
@@ -150,3 +154,115 @@ cd YOUR_REPOSITORY
 
 # Install dependencies
 flutter pub get
+````
+
+-----
+
+## 2️⃣ Configure the Database
+
+You can run the app with **SQLite (default)** or **Firebase Firestore** for cloud sync.
+
+### 🗃️ SQLite (Default)
+
+- No setup required.
+- The app works offline out of the box.
+
+### ☁️ Firebase Firestore (Optional)
+
+1. Go to the [Firebase Console](https://console.firebase.google.com/).
+2. Create a new Firebase project.
+3. Add your Flutter app using the provided setup steps.
+4. Run:
+```bash
+flutterfire configure
+````
+
+5. Enable Firestore Database in your Firebase console.
+6. Modify the provider in lib/providers/fitness_provider.dart:
+```bash
+// Comment out the SQLite service
+// final DatabaseService _dbService = SqliteService();
+
+// Uncomment the Firestore service
+final DatabaseService _dbService = FirestoreService();
+````
+
+-----
+
+### 3️⃣ Run the App
+
+```bash
+# Run in debug mode
+flutter run
+````
+
+-----
+
+### 4️⃣ Build the APK
+
+```bash
+# Build a release-ready APK
+flutter build apk --release
+````
+
+📦 The APK will be generated at: **build/app/outputs/flutter-apk/app-release.apk**
+
+-----
+
+### 🖼️ Screenshots
+<p align="center"> <img src="assets/screens/home_screen.jpg" width="220" alt="Home Screen"/> <img src="assets/screens/dashboard_screen.jpg" width="220" alt="Dashboard Screen"/> <img src="assets/screens/add_new_log.jpg" width="220" alt="Add Activity Screen"/> <img src="assets/screens/advanced_statistics.jpg" width="220" alt="Statistics Screen"/> <img src="assets/screens/settings_screen.jpg" width="220" alt="Settings Screen"/> </p>
+
+-----
+
+### 🧱 Folder Summary
+
+| Folder      | Purpose                                             |
+| :---------- | :-------------------------------------------------- |
+| `api/`      | Handles all data persistence and service abstraction. |
+| `models/`   | Defines data structures like `Activity`.            |
+| `providers/`| Manages app logic and state (fitness + theme).      |
+| `screens/`  | Contains main app screens (Dashboard, Add Log, etc.). |
+| `utils/`    | Contains theming and helper functions.              |
+| `widgets/`  | Custom reusable UI components.                      |
+| `main.dart` | Entry point for app initialization.                 |
+
+-----
+
+### 🧪 Performance Notes
+
+  - Designed for high refresh rate displays (120Hz).
+  - Optimized with Provider to reduce widget rebuilds.
+  - Uses lazy loading for improved responsiveness.
+  - Smooth animations powered by `fl_chart` and Material 3 motion.
+
+-----
+
+### 💡 Tips for Enhancement
+
+  - 🧭 Add a user profile system with Firebase Auth.
+  - 🌍 Integrate Google Fit or Apple Health APIs.
+  - 📲 Add notifications for workout reminders.
+  - 📊 Include more visual analytics for long-term progress.
+
+-----
+
+### 📄 License
+
+This project is licensed under the MIT License — see the `LICENSE` file for details.
+
+-----
+
+### 🙌 Contributing
+
+Contributions are always welcome\!
+
+Feel free to fork this repository, create a new branch, and submit a pull request.
+
+\<p align="center"\>
+Made with ❤️ using Flutter
+<br><br>
+⭐ If you like this project, please consider giving it a star\!
+\</p\>
+
+```
+```
