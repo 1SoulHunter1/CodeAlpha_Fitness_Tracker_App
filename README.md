@@ -264,5 +264,4 @@ Made with ❤️ using Flutter
 ⭐ If you like this project, please consider giving it a star!
 </p>
 
-```
-```
+-----
