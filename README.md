@@ -254,15 +254,15 @@ This project is licensed under the MIT License — see the `LICENSE` file for de
 
 ### 🙌 Contributing
 
-Contributions are always welcome\!
+Contributions are always welcome!
 
 Feel free to fork this repository, create a new branch, and submit a pull request.
 
-\<p align="center"\>
+<p align="center"\>
 Made with ❤️ using Flutter
 <br><br>
-⭐ If you like this project, please consider giving it a star\!
-\</p\>
+⭐ If you like this project, please consider giving it a star!
+</p>
 
 ```
 ```
