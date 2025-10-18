@@ -180,10 +180,10 @@ flutterfire configure
 5. Enable Firestore Database in your Firebase console.
 6. Modify the provider in lib/providers/fitness_provider.dart:
 ```bash
-// Comment out the SQLite service
-// final DatabaseService _dbService = SqliteService();
+# Comment out the SQLite service
+final DatabaseService _dbService = SqliteService();
 
-// Uncomment the Firestore service
+# Uncomment the Firestore service
 final DatabaseService _dbService = FirestoreService();
 ````
 
